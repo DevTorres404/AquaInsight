@@ -1,0 +1,69 @@
+# --- Entornos virtuales y paquetes ---
+.venv/
+venv/
+env/
+.uv-cache/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- Testing y Caches ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Frontend & Node ---
+**/node_modules/
+frontend/dist/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Herramientas de IA, IDEs y runtime local ---
+.atl/
+.codegraph/
+.codeium/
+.config/
+.engram/
+.chart-data-*/
+scratch/
+debug.log
+opencode.json
+AGENTS.md
+skills/
+.agents/
+*.log
+
+# --- Archivos temporales e intermedios ---
+tmp/
+*.tmp
+*.bak
+reports/report_page-*.png
+
+# --- LaTeX auxiliares (preservando .tex y .pdf) ---
+*.aux
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# --- Archivos históricos previos (talleres anteriores de clase) ---
+Talleres pasados/
+
+# --- Sistema operativo y editores ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

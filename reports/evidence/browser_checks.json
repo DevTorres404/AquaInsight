@@ -1,0 +1,17 @@
+{
+  "mode": "Offline UI review using recorded real direct inference responses",
+  "integrated_http_verified": false,
+  "host_limitation": "EACCES on loopback",
+  "cases": [
+    "A",
+    "B",
+    "C",
+    "new_record"
+  ],
+  "invalid_inputs_blocked": true,
+  "stale_results_cleared": true,
+  "stale_inflight_response_ignored": true,
+  "browser_errors": [],
+  "prediction_requests": 5,
+  "test_dataset_loaded": false
+}

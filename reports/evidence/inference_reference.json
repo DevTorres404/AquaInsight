@@ -1,0 +1,181 @@
+{
+  "mode": "Direct inference from frozen pipeline; HTTP not verified in this host",
+  "cases": {
+    "case_a_safe": {
+      "name": "Caso A: Perfil seguro del dataset",
+      "description": "Ejemplo de train etiquetado como seguro. No certifica potabilidad.",
+      "code": "A",
+      "type": "safe-preset",
+      "badge": "Ejemplo del dataset",
+      "data": {
+        "aluminium": 0.08,
+        "ammonia": 14.96,
+        "arsenic": 0.01,
+        "barium": 0.17,
+        "cadmium": 0.002,
+        "chloramine": 6.21,
+        "chromium": 0.0,
+        "copper": 0.81,
+        "flouride": 0.24,
+        "bacteria": 0.15,
+        "viruses": 0.005,
+        "lead": 0.005,
+        "nitrates": 16.78,
+        "nitrites": 1.58,
+        "mercury": 0.002,
+        "perchlorate": 18.68,
+        "radium": 1.67,
+        "selenium": 0.04,
+        "silver": 0.0,
+        "uranium": 0.03
+      },
+      "response": {
+        "prediction": 1,
+        "label": "Segura según el dataset",
+        "probability_safe": 1.0,
+        "probability_unsafe": 0.0,
+        "risk_percentage": 0.0,
+        "who_alerts": [],
+        "out_of_range_features": [],
+        "conflict": false,
+        "interpretation_note": "Clasificación académica según etiquetas del dataset, sin certificación de potabilidad. Las probabilidades de clase no están calibradas como riesgo sanitario. Las alertas OMS son condicionales: requieren confirmar mg/L, especie química y método. Las unidades originales del dataset no están verificadas para todas las variables."
+      }
+    },
+    "case_b_contaminated": {
+      "name": "Caso B: Metales y nitrato alto",
+      "description": "Activa alertas condicionales y extrapolación de nitrato (55 > 19,83 en train).",
+      "code": "B",
+      "type": "contaminated-preset",
+      "badge": "Alertas y extrapolación",
+      "data": {
+        "aluminium": 3.9,
+        "ammonia": 22.64,
+        "arsenic": 0.41,
+        "barium": 0.34,
+        "cadmium": 0.03,
+        "chloramine": 7.94,
+        "chromium": 0.06,
+        "copper": 0.28,
+        "flouride": 0.28,
+        "bacteria": 0.0,
+        "viruses": 0.0,
+        "lead": 0.137,
+        "nitrates": 55.0,
+        "nitrites": 1.55,
+        "mercury": 0.009,
+        "perchlorate": 13.18,
+        "radium": 6.93,
+        "selenium": 0.1,
+        "silver": 0.26,
+        "uranium": 0.02
+      },
+      "response": {
+        "prediction": 0,
+        "label": "Contaminada / no segura",
+        "probability_safe": 0.0488510101010101,
+        "probability_unsafe": 0.9511489898989899,
+        "risk_percentage": 95.11489898989899,
+        "who_alerts": [
+          "Arsénico: 0.41 > 0.01 mg/L",
+          "Cadmio: 0.03 > 0.003 mg/L",
+          "Cromo total: 0.06 > 0.05 mg/L",
+          "Plomo: 0.137 > 0.01 mg/L",
+          "Nitrato como NO₃⁻: 55 > 50 mg/L",
+          "Selenio: 0.1 > 0.04 mg/L",
+          "Nitrato + nitrito: índice combinado 1.62 > 1"
+        ],
+        "out_of_range_features": [
+          "nitrates (55 fuera de [0, 19.83])"
+        ],
+        "conflict": false,
+        "interpretation_note": "Clasificación académica según etiquetas del dataset, sin certificación de potabilidad. Las probabilidades de clase no están calibradas como riesgo sanitario. Las alertas OMS son condicionales: requieren confirmar mg/L, especie química y método. Las unidades originales del dataset no están verificadas para todas las variables."
+      }
+    },
+    "case_c_adversarial": {
+      "name": "Caso C: Caso límite / adverso",
+      "description": "Falla conocida: predice clase segura con alertas y valores fuera de train. Se muestra el conflicto.",
+      "code": "C",
+      "type": "adversarial-preset",
+      "badge": "Falla adversa conocida",
+      "data": {
+        "aluminium": 0.08,
+        "ammonia": 14.96,
+        "arsenic": 9.0,
+        "barium": 0.17,
+        "cadmium": 2.0,
+        "chloramine": 6.21,
+        "chromium": 0.0,
+        "copper": 0.81,
+        "flouride": 0.24,
+        "bacteria": 0.15,
+        "viruses": 0.005,
+        "lead": 5.0,
+        "nitrates": 150.0,
+        "nitrites": 1.58,
+        "mercury": 0.002,
+        "perchlorate": 18.68,
+        "radium": 1.67,
+        "selenium": 0.04,
+        "silver": 0.0,
+        "uranium": 0.03
+      },
+      "response": {
+        "prediction": 1,
+        "label": "Segura según el dataset",
+        "probability_safe": 0.5887083333333333,
+        "probability_unsafe": 0.4112916666666666,
+        "risk_percentage": 41.12916666666666,
+        "who_alerts": [
+          "Arsénico: 9 > 0.01 mg/L",
+          "Cadmio: 2 > 0.003 mg/L",
+          "Plomo: 5 > 0.01 mg/L",
+          "Nitrato como NO₃⁻: 150 > 50 mg/L",
+          "Nitrato + nitrito: índice combinado 3.53 > 1"
+        ],
+        "out_of_range_features": [
+          "arsenic (9 fuera de [0, 1.05])",
+          "cadmium (2 fuera de [0, 0.13])",
+          "lead (5 fuera de [0, 0.2])",
+          "nitrates (150 fuera de [0, 19.83])"
+        ],
+        "conflict": true,
+        "interpretation_note": "Clasificación académica según etiquetas del dataset, sin certificación de potabilidad. Las probabilidades de clase no están calibradas como riesgo sanitario. Las alertas OMS son condicionales: requieren confirmar mg/L, especie química y método. Las unidades originales del dataset no están verificadas para todas las variables."
+      }
+    },
+    "new_record": {
+      "data": {
+        "aluminium": 0.09,
+        "ammonia": 14.96,
+        "arsenic": 0.01,
+        "barium": 0.17,
+        "cadmium": 0.002,
+        "chloramine": 6.21,
+        "chromium": 0.0,
+        "copper": 0.81,
+        "flouride": 0.24,
+        "bacteria": 0.15,
+        "viruses": 0.005,
+        "lead": 0.005,
+        "nitrates": 16.78,
+        "nitrites": 1.58,
+        "mercury": 0.002,
+        "perchlorate": 18.68,
+        "radium": 1.67,
+        "selenium": 0.04,
+        "silver": 0.0,
+        "uranium": 0.03
+      },
+      "response": {
+        "prediction": 1,
+        "label": "Segura según el dataset",
+        "probability_safe": 1.0,
+        "probability_unsafe": 0.0,
+        "risk_percentage": 0.0,
+        "who_alerts": [],
+        "out_of_range_features": [],
+        "conflict": false,
+        "interpretation_note": "Clasificación académica según etiquetas del dataset, sin certificación de potabilidad. Las probabilidades de clase no están calibradas como riesgo sanitario. Las alertas OMS son condicionales: requieren confirmar mg/L, especie química y método. Las unidades originales del dataset no están verificadas para todas las variables."
+      }
+    }
+  }
+}

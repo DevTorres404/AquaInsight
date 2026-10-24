@@ -1,0 +1,24 @@
+{
+  "python_tests": {
+    "passed": 38,
+    "http_skipped": 38,
+    "subtests_passed": 8,
+    "reason": "Host denies loopback with EACCES"
+  },
+  "frontend_unit_tests": {
+    "passed": 2
+  },
+  "frontend_lint": "passed",
+  "frontend_build": "passed",
+  "browser_review": "offline, recorded real direct inference responses",
+  "test_reevaluated": false,
+  "model_retrained": false,
+  "dependency_warnings": [
+    "NumPy 2.5/joblib 1.5.3 deprecated ndarray shape assignment on loading original artifact",
+    "Starlette recommends httpx2 for future TestClient versions"
+  ],
+  "human_confirmation_pending": [
+    "Individual contributions",
+    "Scope of Google Antigravity usage declared in earlier draft"
+  ]
+}

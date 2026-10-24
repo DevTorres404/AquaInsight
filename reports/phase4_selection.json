@@ -1,0 +1,118 @@
+{
+  "selection_locked_before_test": "Random Forest (GA-Optimized)",
+  "selection_source": "reports/phase3_results.json",
+  "class_labels": {
+    "0": "Contaminada / no segura",
+    "1": "Segura según el dataset"
+  },
+  "model_params": {
+    "n_estimators": 200,
+    "max_depth": 20,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "criterion": "entropy",
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "feature_order": [
+    "aluminium",
+    "ammonia",
+    "arsenic",
+    "barium",
+    "cadmium",
+    "chloramine",
+    "chromium",
+    "copper",
+    "flouride",
+    "bacteria",
+    "viruses",
+    "lead",
+    "nitrates",
+    "nitrites",
+    "mercury",
+    "perchlorate",
+    "radium",
+    "selenium",
+    "silver",
+    "uranium"
+  ],
+  "train_feature_min": {
+    "aluminium": 0.0,
+    "ammonia": -0.08,
+    "arsenic": 0.0,
+    "barium": 0.0,
+    "cadmium": 0.0,
+    "chloramine": 0.0,
+    "chromium": 0.0,
+    "copper": 0.0,
+    "flouride": 0.0,
+    "bacteria": 0.0,
+    "viruses": 0.0,
+    "lead": 0.0,
+    "nitrates": 0.0,
+    "nitrites": 0.0,
+    "mercury": 0.0,
+    "perchlorate": 0.0,
+    "radium": 0.0,
+    "selenium": 0.0,
+    "silver": 0.0,
+    "uranium": 0.0
+  },
+  "train_feature_max": {
+    "aluminium": 5.05,
+    "ammonia": 29.84,
+    "arsenic": 1.05,
+    "barium": 4.94,
+    "cadmium": 0.13,
+    "chloramine": 8.54,
+    "chromium": 0.9,
+    "copper": 2.0,
+    "flouride": 1.5,
+    "bacteria": 1.0,
+    "viruses": 1.0,
+    "lead": 0.2,
+    "nitrates": 19.83,
+    "nitrites": 2.92,
+    "mercury": 0.01,
+    "perchlorate": 60.01,
+    "radium": 7.99,
+    "selenium": 0.1,
+    "silver": 0.5,
+    "uranium": 0.09
+  },
+  "train_rows": 6396,
+  "test_rows": 1600,
+  "train_sha256": "2beefd3ce0309f76fa37f5bd85aa36301b169f2c78ffed68db6ca10ce60d9e29",
+  "test_sha256": "a3451b914c3f6f2a0b51bb03b835984baa6b51cea0cb6adc7516c1c3d84e7fb7",
+  "test_evaluations": 1,
+  "test_metrics": {
+    "confusion_matrix_labels_0_1": [
+      [
+        1386,
+        32
+      ],
+      [
+        30,
+        152
+      ]
+    ],
+    "macro_f1": 0.9043619437663655,
+    "roc_auc": 0.9828500131744138,
+    "recall_class_1_safe": 0.8351648351648352,
+    "recall_class_0_unsafe": 0.9774330042313117,
+    "precision_class_1_safe": 0.8260869565217391,
+    "precision_class_0_unsafe": 0.9788135593220338,
+    "accuracy": 0.96125
+  },
+  "environment": {
+    "python": "3.13.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "cpu_count": 24,
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "matplotlib": "3.11.2"
+  }
+}
