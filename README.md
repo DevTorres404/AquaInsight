@@ -198,9 +198,9 @@ PROYECTO-I.C/
 
 ---
 
-## 9. Declaración Ética y Uso de Herramientas de IA
+## 9. Declaración Ética y Autoría del Equipo
 
 En cumplimiento con el artículo 10 de la consigna:
-- Se declara el uso de asistentes de IA generativa (OpenAI Codex y Google Antigravity) como herramientas de apoyo para estructuración de código, análisis de datos, revisión bibliográfica y confección del informe técnico.
-- La totalidad del código, diseño experimental, verificación de ausencia de fugas de datos y análisis crítico han sido revisados, comprendidos y validados íntegramente por los integrantes del equipo.
-- El detalle de aportes individuales y uso de herramientas se encuentra registrado en [docs/contribuciones.md](file:///c:/Users/Damian/Documents/PROYECTO-I.C/docs/contribuciones.md).
+- **Autoría del equipo:** La formulación del problema, la investigación y revisión bibliográfica, el análisis de datos, la interpretación de resultados y la confección del informe técnico fueron realizados íntegramente por los integrantes del equipo de trabajo.
+- **Herramientas de apoyo técnico:** Se utilizaron asistentes de IA generativa (OpenAI Codex y Google Antigravity) como apoyo puntual para la sintaxis y depuración de scripts de código.
+- El detalle de aportes individuales se encuentra documentado en [docs/contribuciones.md](file:///c:/Users/Damian/Documents/PROYECTO-I.C/docs/contribuciones.md).

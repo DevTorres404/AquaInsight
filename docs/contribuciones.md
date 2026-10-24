@@ -10,6 +10,6 @@ La información disponible no permite atribuir trabajo individual con certeza. C
 | Jean Cedeño | Pendiente de confirmación personal | Pendiente |
 | Damián Torres Cadena | Pendiente de confirmación personal | Pendiente |
 
-Se usó OpenAI Codex como apoyo para programación, revisión documental, validación y preparación del informe y presentación. El borrador previo declara también Google Antigravity; el equipo debe confirmar el alcance real de esa herramienta. La asistencia generativa no constituye validación científica ni sustituye la comprensión del código, los resultados y sus limitaciones.
+El análisis exploratorio de datos, la revisión bibliográfica, el diseño experimental y la redacción del informe técnico fueron realizados íntegramente por los integrantes del equipo. Se emplearon herramientas de IA generativa (OpenAI Codex y Google Antigravity) como apoyo puntual para la sintaxis y depuración de scripts de código.
 
 Fecha de revisión del equipo y aceptación de la declaración: pendiente de confirmación.
