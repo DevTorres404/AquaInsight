@@ -2,7 +2,7 @@
 
 > **Proyecto Integrador de Inteligencia Computacional — UPSE**  
 > **Equipo:** Melanie Tomalá, Jean Cedeño, Damián Torres Cadena | **Docente:** Ing. Daniel Quirumbay  
-> **Dominio:** Medio Ambiente | **Consigna oficial:** [Proyecto_Inteligencia_Computacional_1.md](file:///c:/Users/Damian/Documents/PROYECTO-I.C/Proyecto_Inteligencia_Computacional_1.md)
+> **Dominio:** Medio Ambiente | **Consigna oficial:** `docs/Proyecto_Inteligencia_Computacional_1.md`
 
 ---
 
@@ -147,9 +147,10 @@ PROYECTO-I.C/
 ├── notebooks/                     # Cuadernos Jupyter por fases (2, 3 y 4)
 ├── tests/                         # Tests unitarios y de integración
 ├── deliverables/
-│   └── Informe_AquaInsight.pdf    # Informe técnico en formato IEEE (PDF)
-├── formato.tex                    # Código fuente del informe en LaTeX
-└── requirements.txt               # Dependencias de Python fijadas
+│   ├── Informe_AquaInsight.pdf        # Informe técnico final con anexo (PDF)
+│   └── Diapositivas_AquaInsight.pdf   # Diapositivas para la defensa (PDF)
+├── docs/                              # Documentación metodológica y consigna
+└── requirements.txt                   # Dependencias de Python fijadas
 ```
 
 ---
@@ -157,4 +158,4 @@ PROYECTO-I.C/
 ## ⚖️ Declaración de Autoría
 
 - **Autoría del equipo:** La investigación, revisión bibliográfica, análisis estadístico de datos, diseño experimental y redacción del informe técnico fueron realizados íntegramente por los integrantes del equipo.
-- **Herramientas de apoyo:** Se usaron asistentes de IA de manera complementaria para asistencia técnica en sintaxis y depuración de código ([docs/contribuciones.md](file:///c:/Users/Damian/Documents/PROYECTO-I.C/docs/contribuciones.md)).
+- **Herramientas de apoyo:** Se usaron asistentes de IA de manera complementaria para asistencia técnica en sintaxis y depuración de código (`docs/contribuciones.md`).

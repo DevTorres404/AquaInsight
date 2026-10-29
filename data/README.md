@@ -6,7 +6,7 @@
 - **Fuente original:** [Kaggle: Water Quality Dataset (mssmartypants)](https://www.kaggle.com/datasets/mssmartypants/water-quality)
 - **Licencia:** Database: Open Database, Contents: Database Contents (Uso abierto de investigación).
 - **Fecha de consulta / descarga:** 2026-10-20
-- **Ubicación local:** [`data/water_quality.csv`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/water_quality.csv)
+- **Ubicación local:** `data/water_quality.csv`
 - **Dimensiones:** 7.999 registros $\times$ 21 columnas (20 características físico-químicas/biológicas + 1 variable objetivo).
 
 ## Diccionario de Variables

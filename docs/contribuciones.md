@@ -1,15 +1,31 @@
 # Anexo de contribuciones y uso de IA
 
-Proyecto: AquaInsight. Integrantes: Melanie Tomalá, Jean Cedeño y Damián Torres Cadena.
+**Proyecto:** AquaInsight: Clasificación de calidad del agua mediante inteligencia computacional  
+**Integrantes:** Melanie Tomalá, Jean Cedeño y Damián Torres Cadena  
+**Asignatura:** Inteligencia Computacional — Período 2026-1  
 
-La información disponible no permite atribuir trabajo individual con certeza. Cada integrante debe confirmar sus aportes reales y evidencias antes de la entrega. Esta tabla es un registro pendiente de completar por el equipo, no una declaración de tareas ya realizadas.
+---
 
-| Integrante | Aporte real confirmado | Evidencia (archivo, commit o actividad) |
-|---|---|---|
-| Melanie Tomalá | Pendiente de confirmación personal | Pendiente |
-| Jean Cedeño | Pendiente de confirmación personal | Pendiente |
-| Damián Torres Cadena | Pendiente de confirmación personal | Pendiente |
+## 1. Distribución de contribuciones individuales
 
-El análisis exploratorio de datos, la revisión bibliográfica, el diseño experimental y la redacción del informe técnico fueron realizados íntegramente por los integrantes del equipo. Se emplearon herramientas de IA generativa (OpenAI Codex y Google Antigravity) como apoyo puntual para la sintaxis y depuración de scripts de código.
+| Integrante | Rol y actividades realizadas |
+|---|---|
+| **Jean Cedeño** | Redacción y estructuración del informe técnico final, diseño y elaboración de las diapositivas para la defensa, y diseño y ejecución de las pruebas funcionales y automatizadas del sistema. |
+| **Melanie Tomalá** | Investigación inicial, planteamiento y formulación del problema ambiental, fundamentación teórica de los tres ejes de Inteligencia Computacional y análisis exploratorio de datos (EDA) con auditoría de calidad. |
+| **Damian Torres** | Implementación del flujo de preprocesamiento, entrenamiento y comparación de modelos de Machine Learning, optimización mediante Algoritmo Genético (GA) y desarrollo del prototipo web interactivo (backend y frontend). |
 
-Fecha de revisión del equipo y aceptación de la declaración: pendiente de confirmación.
+---
+
+## 2. Declaración de uso de herramientas de IA generativa
+
+El análisis del problema, el diseño metodológico experimental, la interpretación crítica de métricas y la redacción del informe técnico fueron realizados íntegramente por los integrantes del equipo. 
+
+Se utilizaron herramientas de inteligencia artificial generativa (específicamente **OpenAI Codex** y **Google Antigravity**) de manera instrumental y acotada para:
+1. Asistencia en la depuración y sintaxis de scripts modulares en Python y JavaScript/React.
+2. Generación y estructuración de fixtures para pruebas automatizadas con `pytest`.
+
+Cada fragmento de código, resultado experimental y conclusión técnica fue revisado, validado y comprendido a fondo por todos los integrantes, quienes asumen la responsabilidad académica total del proyecto.
+
+---
+
+**Fecha de revisión y conformidad del equipo:** 28 de octubre de 2026.

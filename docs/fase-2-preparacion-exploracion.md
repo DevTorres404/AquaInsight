@@ -10,7 +10,7 @@
 ## 1. Procedencia y Dimensiones de los Datos
 
 - **Fuente:** Repositorio público de Kaggle (*Water Quality Dataset* por `mssmartypants`).
-- **Archivo original:** [`data/water_quality.csv`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/water_quality.csv).
+- **Archivo original:** `data/water_quality.csv`.
 - **Dimensiones originales:** 7.999 observaciones $\times$ 21 atributos.
 - **Auditoría de Integridad:** Se identificaron exactamente **3 registros corruptos** que contenían cadenas de texto `#NUM!` en las variables `ammonia` y en la variable objetivo `is_safe` (filas con índices `7551`, `7568` y `7890`).
 - **Dimensiones saneadas:** **7.996 registros limpios** (cero nulos remanentes), superando con holgura los 500 registros útiles requeridos por la consigna.
@@ -28,8 +28,8 @@ El dataset cuenta con **20 características numéricas continuas** correspondien
 
 ```
 Distribución de clases:
-[No segura (0)]  ████████████████████████████████████████  7,084 (88.59%)
-[Segura (1)]     █████                                       912 (11.41%)
+No segura (0)]  ████████████████████████████████████████  7,084 (88.59%)
+Segura (1)]     █████                                       912 (11.41%)
 ```
 
 ### Justificación Metodológica del Desbalance
@@ -39,12 +39,12 @@ El desbalance severo (~89/11) confirma empíricamente la regla de la cátedra: *
 
 ## 3. Visualizaciones Generadas
 
-Las gráficas de alta resolución se encuentran generadas y disponibles en [`reports/figures/`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/):
+Las gráficas de alta resolución se encuentran generadas y disponibles en `reports/figures/`:
 
-1. **[`01_class_distribution.png`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/01_class_distribution.png):** Gráfico de barras que ilustra la marcada asimetría entre clases y documenta la necesidad de aprendizaje sensible al costo (*cost-sensitive learning*).
-2. **[`02_correlation_heatmap.png`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/02_correlation_heatmap.png):** Mapa de calor con correlaciones no paramétricas de Spearman entre los 20 contaminantes. Se observa baja multicolinealidad global entre predictores (todos con $r < 0.60$), sin que la baja correlación demuestre independencia, ortogonalidad ni utilidad predictiva de todas las variables.
-3. **[`03_heavy_metals_boxplots.png`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/03_heavy_metals_boxplots.png):** Diagramas de caja y bigotes para metales de alta toxicidad (aluminio, arsénico, cadmio, plomo, mercurio y cromo). Los valores atípicos se describen en la escala original del dataset; no se interpretan como excesos normativos sin verificar unidades y especies.
-4. **[`04_contaminants_correlation_target.png`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/04_contaminants_correlation_target.png):** Ranking de correlaciones individuales con la variable objetivo. Las correlaciones describen asociaciones con la etiqueta; no identifican causas de contaminación ni garantizan un orden de importancia del modelo.
+1. **`01_class_distribution.png`:** Gráfico de barras que ilustra la marcada asimetría entre clases y documenta la necesidad de aprendizaje sensible al costo (*cost-sensitive learning*).
+2. **`02_correlation_heatmap.png`:** Mapa de calor con correlaciones no paramétricas de Spearman entre los 20 contaminantes. Se observa baja multicolinealidad global entre predictores (todos con $r < 0.60$), sin que la baja correlación demuestre independencia, ortogonalidad ni utilidad predictiva de todas las variables.
+3. **`03_heavy_metals_boxplots.png`:** Diagramas de caja y bigotes para metales de alta toxicidad (aluminio, arsénico, cadmio, plomo, mercurio y cromo). Los valores atípicos se describen en la escala original del dataset; no se interpretan como excesos normativos sin verificar unidades y especies.
+4. **`04_contaminants_correlation_target.png`:** Ranking de correlaciones individuales con la variable objetivo. Las correlaciones describen asociaciones con la etiqueta; no identifican causas de contaminación ni garantizan un orden de importancia del modelo.
 
 ---
 
@@ -59,7 +59,7 @@ Para separar el ajuste de transformaciones de la evaluación:
 2. **Aislamiento en Scikit-Learn `Pipeline`:** 
    - El escalador `StandardScaler` fue calibrado (`preprocessor.fit`) **estrictamente sobre `X_train`**.
    - Los datos de prueba jamás fueron consultados durante el cálculo de la media $\mu$ ni la desviación estándar $\sigma$.
-   - El preprocesador ajustado fue persistido independientemente en [`data/processed/preprocessor.joblib`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/processed/preprocessor.joblib).
+   - El preprocesador ajustado fue persistido independientemente en `data/processed/preprocessor.joblib`.
 
 ---
 
@@ -67,13 +67,13 @@ Para separar el ajuste de transformaciones de la evaluación:
 
 | Artefacto | Ubicación | Descripción |
 |---|---|---|
-| Script de Ejecución | [`backend/eda_preprocessing.py`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/backend/eda_preprocessing.py) | Código modular reproducible de limpieza, EDA y partición. |
-| Cuaderno Interactivo | [`notebooks/fase2_eda_preprocessing.ipynb`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/notebooks/fase2_eda_preprocessing.ipynb) | Notebook Jupyter documentado celda por celda para Google Colab o VS Code. |
-| Conjunto Train | [`data/processed/train.csv`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/processed/train.csv) | 6.396 registros estratificados para entrenamiento y validación cruzada. |
-| Conjunto Test | [`data/processed/test.csv`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/processed/test.csv) | 1.600 registros reservados para la evaluación final única en Fase IV. |
-| Pipeline Serializado | [`data/processed/preprocessor.joblib`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/data/processed/preprocessor.joblib) | Objeto `StandardScaler` ajustado sin fuga de datos. |
-| Resumen JSON | [`reports/phase2_summary.json`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/phase2_summary.json) | Metadatos cuantitativos de la fase para trazabilidad de experimentos. |
-| Gráficas EDA | [`reports/figures/*.png`](file:///c:/Users/Damian/Documents/PROYECTO-I.C/reports/figures/) | 4 figuras de alta resolución (300 DPI) para el informe final. |
+| Script de Ejecución | `backend/eda_preprocessing.py` | Código modular reproducible de limpieza, EDA y partición. |
+| Cuaderno Interactivo | `notebooks/fase2_eda_preprocessing.ipynb` | Notebook Jupyter documentado celda por celda para Google Colab o VS Code. |
+| Conjunto Train | `data/processed/train.csv` | 6.396 registros estratificados para entrenamiento y validación cruzada. |
+| Conjunto Test | `data/processed/test.csv` | 1.600 registros reservados para la evaluación final única en Fase IV. |
+| Pipeline Serializado | `data/processed/preprocessor.joblib` | Objeto `StandardScaler` ajustado sin fuga de datos. |
+| Resumen JSON | `reports/phase2_summary.json` | Metadatos cuantitativos de la fase para trazabilidad de experimentos. |
+| Gráficas EDA | `reports/figures/*.png` | 4 figuras de alta resolución (300 DPI) para el informe final. |
 
 ## Alcance de la exploración y corrección de interpretación
 
