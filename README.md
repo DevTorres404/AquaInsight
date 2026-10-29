@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Inicio Rápido (Quickstart Local)
+## Inicio Rápido (Quickstart Local)
 
 En menos de 2 minutos puedes tener el prototipo completo (Backend FastAPI + Frontend React) funcionando localmente en un solo puerto:
 
@@ -64,7 +64,7 @@ python -m uvicorn backend.api:app --host 127.0.0.1 --port 8000
 
 ---
 
-### 🌐 Dónde abrir la aplicación
+### Puntos de Acceso al Servicio
 
 Una vez iniciado el servidor, accede desde tu navegador:
 
@@ -76,7 +76,7 @@ Una vez iniciado el servidor, accede desde tu navegador:
 
 ---
 
-## 🛠️ Modo Desarrollo (React con Vite HMR)
+## Entorno de Desarrollo (React con Vite HMR)
 
 Si deseas modificar la interfaz y ver los cambios en tiempo real con recarga en caliente:
 
@@ -92,7 +92,7 @@ Si deseas modificar la interfaz y ver los cambios en tiempo real con recarga en 
 
 ---
 
-## 🧪 Cómo Ejecutar las Pruebas Automatizadas
+## Ejecución de Pruebas Automatizadas
 
 Verifica la integridad de la API y de los componentes sin tocar el conjunto de prueba:
 
@@ -107,7 +107,7 @@ npm --prefix frontend run lint
 
 ---
 
-## 🎯 Protocolo de Demostración en la Defensa
+## Protocolo de Demostración para la Defensa
 
 Para la presentación ante el tribunal docente:
 
@@ -119,7 +119,7 @@ Para la presentación ante el tribunal docente:
 
 ---
 
-## 📖 Resumen del Proyecto
+## Resumen del Proyecto
 
 - **Problema:** Clasificación binaria de calidad del agua (`is_safe = 1` vs `0`) a partir de 20 variables químicas y microbiológicas.
 - **Modelos comparados:** Dummy, KNN, SVM, MLP y Random Forest (con CV estratificada de 5 pliegues sobre 6.396 filas de train).
@@ -130,7 +130,7 @@ Para la presentación ante el tribunal docente:
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 PROYECTO-I.C/
@@ -155,7 +155,7 @@ PROYECTO-I.C/
 
 ---
 
-## ⚖️ Declaración de Autoría
+## Declaración de Autoría
 
 - **Autoría del equipo:** La investigación, revisión bibliográfica, análisis estadístico de datos, diseño experimental y redacción del informe técnico fueron realizados íntegramente por los integrantes del equipo.
 - **Herramientas de apoyo:** Se usaron asistentes de IA de manera complementaria para asistencia técnica en sintaxis y depuración de código (`docs/contribuciones.md`).
