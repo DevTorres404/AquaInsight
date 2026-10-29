@@ -2,7 +2,7 @@
 
 > **Proyecto Integrador de Inteligencia Computacional — UPSE**  
 > **Equipo:** Melanie Tomalá, Jean Cedeño, Damián Torres Cadena | **Docente:** Ing. Daniel Quirumbay  
-> **Dominio:** Medio Ambiente | **Consigna oficial:** `docs/Proyecto_Inteligencia_Computacional_1.md`
+> **Dominio:** Medio Ambiente | **Área:** Calidad del Agua y Salud Pública
 
 ---
 

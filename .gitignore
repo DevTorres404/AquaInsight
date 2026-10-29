@@ -62,6 +62,13 @@ reports/report_page-*.png
 # --- Archivos históricos previos (talleres anteriores de clase) ---
 Talleres pasados/
 
+# Borradores de formato, logos locales y consigna
+Proyecto_Inteligencia_Computacional_*.md
+Proyecto_Inteligencia_Computacional_Parcial.pdf
+Hydrography Schoo.pdf
+formato.*
+Upse.png
+
 # --- Sistema operativo y editores ---
 .DS_Store
 Thumbs.db
